@@ -10,20 +10,22 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   fetch("https://jsonplaceholder.typicode.com/users")
-    .then(function (response) {return response.json()})
+    .then(function (response) {
+      return response.json();
+    })
     .then(function (data) {
       for (let i = 0; i < data.length; i++) {
         let newEl = document.createElement("div");
         newEl.innerHTML = data[i].name + " <- ";
         let newerEl = document.createElement("a");
-        newerEl.href = `https://${data[i].website}`
-        newerEl.innerHTML = "Linkas"
-        newerEl.target = "_blank"
-        newEl.appendChild(newerEl)
+        newerEl.href = `https://${data[i].website}`;
+        newerEl.innerHTML = "Linkas";
+        newerEl.target = "_blank";
+        newEl.appendChild(newerEl);
         document.getElementById("result").appendChild(newEl);
       }
     })
-    .catch((error) => console.error("Error:", error));
+    .catch((error) => console.error("Vismantas padare errora:", error));
 
 });
 
