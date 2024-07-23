@@ -1,0 +1,23 @@
+.container {
+  display: flex; /* or inline-flex */
+  justify-content: center;
+ align-items: center;
+ flex-direction: column;
+}
+h1 {
+  padding: 60px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 30px;
+  width: 100%;
+}
+input::placeholder {
+  font-weight: bold;
+  opacity: 0.5;
+  color: red;
+}
+
+body {
+  background-color: rgb(246, 217, 221);
+}
